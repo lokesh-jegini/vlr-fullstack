@@ -1,0 +1,8 @@
+li*5 --->short cut to create list 
+unorder list-->1)type attribute
+               2)
+order list-->1)type attribute
+             2
+
+shortcut key
+1)alt+tab (for select more line and edit at single time)
