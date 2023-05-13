@@ -1,23 +1,22 @@
-// Get references to HTML elements (with out using fomr)
-const taskInput = document.getElementById("taskInput");
-const addButton = document.getElementById("addButton");
-const taskList = document.getElementById("taskList");
-console.log(taskInput.value);
-// debugger;
-// Event listener for adding a new task
-addButton.addEventListener("click", function () {
-  // Get the task input value
-  const task = taskInput.value;
+function loki(event) {
+  event.preventDefault();
 
-  if (task) {
-    // Create a new list item
-    const listItem = document.createElement("li");
-    listItem.textContent = task;
+  var text1 = document.getElementById("text1").value;
+  var passord1 = document.getElementById("passord1").value;
+  var radio1 = document.getElementById("radio1").value;
+  var check1 = document.getElementById("check1").value;
+  var textarea1 = document.getElementById("textarea1").value;
+  console.log(text1);
+  console.log(passord1);
+  console.log(radio1);
+  console.log(check1);
+  console.log(textarea1);
+  document.getElementById("text1").value = "";
+  document.getElementById("passord1").value = "";
+  document.getElementById("radio1").value = "";
+  document.getElementById("check1").value = "";
+  document.getElementById("textarea1").value = "";
 
-    // Add the new list item to the task list
-    taskList.appendChild(listItem);
-
-    // Clear the task input
-    taskInput.value = "";
-  }
-});
+  // Optionally, focus on the first text field after resetting the values
+  document.getElementById("text1").focus();
+}
