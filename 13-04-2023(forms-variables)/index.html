@@ -7,15 +7,16 @@
     <title>Value attribute</title>
   </head>
   <body>
-    <form onsubmit="loki(event)">
+    <form class="form">
       <input type="text" id="text1" placeholder=" enter name" /><br />
       <input type="email" placeholder=" enter email" /><br />
       <input
+        name="pass"
         type="password"
         id="passord1"
         placeholder=" enter password"
       /><br />
-      <input type="number" placeholder=" enter number" /><br />
+      <input name="num" type="number" placeholder=" enter number" /><br />
       <input type="text" placeholder=" enter tel" /><br />
       <input type="file" /><br />
       <input id="radio1" type="radio" value="male" />:Male
@@ -30,7 +31,7 @@
         <option value="loki">Loki</option>
         <option value="murali">murali</option> </select
       ><br />
-      <textarea id="textarea1" cols="30" rows="10"></textarea><br />
+      <textarea name="area" id="textarea1" cols="30" rows="10"></textarea><br />
       <input type="submit" vlaue="click here" /><br />
       <input type="reset" value="reset" /><br />
     </form>
