@@ -1,22 +1,23 @@
-// debugger;
+//before settime out
+ var button1 = $('[role="menuitem"]');
+        console.log(button1[7]);
+        console.log(button1);
 
-document.querySelectorAll("button")[0].addEventListener("click", () => {
-  sum(10, 200);
-});
-// debugger;
-// Create a new <div> element
-const newDiv = document.createElement("div");
-// Set some attributes and content for the new <div> element
-newDiv.id = "myDiv";
-newDiv.className = "myClass";
-newDiv.textContent = "before and afte the graphically viw of dom!";
-// Append the new <div> element to an existing element in the document
-const parentElement = document.getElementById("demo");
-parentElement.appendChild(newDiv);
+//after settimout
 
-function sum(a, b) {
-  debugger;
-  var a;
-  var b;
-  alert(a + b);
-}
+
+      setTimeout(() => {
+        var button1 = $('[role="menuitem"]');
+        console.log(button1[7]);
+        console.log(button1);
+      }, 200);
+      // setTimeout(alert("cbchcb"), 200);
+      setTimeout(() => {
+        debugger;
+        alert("cbchcb");
+      }, 200);
+
+      //widow.load()
+
+window.onload = function () { };
+
