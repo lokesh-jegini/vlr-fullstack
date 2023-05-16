@@ -1,46 +1,16 @@
-const todoInput = document.getElementById("todo-input");
-const addBtn = document.getElementById("add-btn");
-const todoList = document.getElementById("todo-list");
+document.getElementById("demo").innerHTML = "Hello World!";
+// debugger;
+document.querySelectorAll("button")[0].onclick = () => {
+  // debugger;
+  // Create a new <div> element
+  const newDiv = document.createElement("div");
 
-addBtn.addEventListener("click", addTodo);
-todoList.addEventListener("click", deleteTodo);
+  // Set some attributes and content for the new <div> element
+  newDiv.id = "myDiv";
+  newDiv.className = "myClass";
+  newDiv.textContent = "before and afte the graphically viw of dom!";
 
-function addTodo() {
-  const task = todoInput.value;
-
-  if (task === "") {
-    return;
-  }
-
-  const todoItem = createTodoItem(task);
-  todoList.appendChild(todoItem);
-
-  todoInput.value = "";
-}
-
-function deleteTodo(event) {
-  const deleteBtn = event.target;
-  
-  if (deleteBtn.classList.contains("delete-btn")) {
-    const todoItem = deleteBtn.closest(".todo-item");
-    todoList.removeChild(todoItem);
-  }
-}
-
-function createTodoItem(task) {
-  const todoItem = document.createElement("li");
-  todoItem.classList.add("todo-item");
-
-  const taskElement = document.createElement("span");
-  taskElement.classList.add("task");
-  taskElement.textContent = task;
-
-  const deleteBtn = document.createElement("button");
-  deleteBtn.classList.add("delete-btn");
-  deleteBtn.textContent = "Delete";
-
-  todoItem.appendChild(taskElement);
-  todoItem.appendChild(deleteBtn);
-
-  return todoItem;
-}
+  // Append the new <div> element to an existing element in the document
+  const parentElement = document.getElementById("demo");
+  parentElement.appendChild(newDiv);
+};
